@@ -1,0 +1,21 @@
+.dashboard-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.dashboard-navbar blockquote {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-navbar blockquote mark {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

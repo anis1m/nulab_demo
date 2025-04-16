@@ -1,0 +1,14 @@
+.dashboard-common {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 3rem;
+}
+
+.dashboard-common section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

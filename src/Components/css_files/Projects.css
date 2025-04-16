@@ -1,0 +1,46 @@
+.dashboard-project {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard-project table {
+  width: 100%;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.dashboard-project table th,
+.dashboard-project table td {
+  padding: 1rem;
+  border: 1px solid gray;
+}
+
+.dashboard-project table th {
+  background-color: gray;
+  color: white;
+  border-color: white;
+}
+
+.dashboard-project table th:first-child {
+  border-left-color: gray;
+}
+
+.dashboard-project table th:last-child {
+  border-right-color: gray;
+}
+
+.dashboard-project table tbody tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.dashboard-project table tbody tr td blockquote {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-project table tbody tr td blockquote i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
