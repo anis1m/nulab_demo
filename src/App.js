@@ -23,6 +23,7 @@ function App() {
         projectsdata={projectsdata}
         setissuesdata={setissuesdata}
         setusersdata={setusersdata}
+        usersdata={usersdata}
         triggerprojectupdate={triggerprojectupdate}
         updatedprojectid={updatedprojectid}
         setshowaddproject={setshowaddproject}

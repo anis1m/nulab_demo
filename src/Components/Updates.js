@@ -18,15 +18,18 @@ function Updates({ usersdata }) {
               <i class="fa-solid fa-a" style={{ fontSize: "2rem" }}></i>
               <blockquote>
                 <h4>
-                  Aftab edited the <span>members</span> of the project
+                  Aftab added the <span>members</span> in group
                 </h4>
-                <mark>
-                  {" "}
-                  <i class="fa-solid fa-building"></i> {user.ProjectName}
-                </mark>
+
                 <mark>
                   <i class="fa-solid fa-user-circle"></i> {user.UserName} has
-                  been added as a project member
+                  been added as a member
+                </mark>
+                <mark>
+                  <i className="fa-solid fa-envelope"></i> {user.Email}
+                </mark>
+                <mark>
+                  <i className="fa-solid fa-phone"></i> {user.PhoneNumber}
                 </mark>
               </blockquote>
               <p style={{ marginLeft: "auto" }}>

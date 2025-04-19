@@ -14,6 +14,7 @@ function Actions({
   settriggerprojectupdate,
   setissuesdata,
   setusersdata,
+  usersdata,
 }) {
   const [projectId, setprojectId] = useState(1);
   const [issuedId, setissuesId] = useState(1);
@@ -58,8 +59,8 @@ function Actions({
           <aside>
             <i class="fa-solid fa-list-ul"></i>
             <blockquote>
-              <h3>Add Issue</h3>
-              <p>Add an issue related to project</p>
+              <h3>Assign Work</h3>
+              <p>Assign work to user in project </p>
               <button onClick={() => setshowaddissues(true)}>Add</button>
             </blockquote>
           </aside>
@@ -83,14 +84,11 @@ function Actions({
           setissuesdata={setissuesdata}
           setissuesId={setissuesId}
           issuedId={issuedId}
+          usersdata={usersdata}
         />
       )}
       {showaddusers && (
-        <Users
-          setshowaddusers={setshowaddusers}
-          setusersdata={setusersdata}
-          projectsdata={projectsdata}
-        />
+        <Users setshowaddusers={setshowaddusers} setusersdata={setusersdata} />
       )}
     </>
   );

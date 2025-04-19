@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function Users({ setshowaddusers, setusersdata, projectsdata }) {
+function Users({ setshowaddusers, setusersdata }) {
   const [data, setdata] = useState({
-    ProjectName: "",
     UserName: "",
     Email: "",
+    PhoneNumber: "",
     CreatedDate: new Date().toDateString(),
   });
 
@@ -20,16 +20,8 @@ function Users({ setshowaddusers, setusersdata, projectsdata }) {
   return (
     <div className="add-issues">
       <form onSubmit={handleSubmit}>
-        <h2>Add Users to Project</h2>
-        <blockquote>
-          <label>Project Name</label>
-          <select required name="ProjectName" onChange={handleChange}>
-            <option value="">Select Project Name</option>
-            {projectsdata.map((project) => (
-              <option value={projectsdata.Name}>{project.Name}</option>
-            ))}
-          </select>
-        </blockquote>
+        <h2>Add Users</h2>
+
         <blockquote>
           <label>User Name</label>
           <input
@@ -48,7 +40,18 @@ function Users({ setshowaddusers, setusersdata, projectsdata }) {
             name="Email"
             onChange={handleChange}
           />
-          <small>we will send email to user</small>
+        </blockquote>
+        <blockquote>
+          <label>User Phone Number</label>
+          <input
+            type="number"
+            placeholder="Enter User Phone Number (Without Country Code)"
+            name="PhoneNumber"
+            onChange={handleChange}
+            onInput={(e) => {
+              e.target.value = e.target.value.slice(0, 10);
+            }}
+          />
         </blockquote>
         <button type="submit">Add User</button>
         <i

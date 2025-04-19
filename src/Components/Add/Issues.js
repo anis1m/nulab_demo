@@ -7,14 +7,16 @@ function Issues({
   setissuesdata,
   issuedId,
   setissuesId,
+  usersdata,
 }) {
   const [data, setdata] = useState({
     Id: issuedId,
+    UserName: "",
     ProjectName: "",
     Subject: "",
     Description: "",
     Status: "Pending",
-    IssuedOn: new Date().toLocaleString(),
+    AssignedOn: new Date().toLocaleString(),
   });
 
   function handleChange(e) {
@@ -30,7 +32,16 @@ function Issues({
   return (
     <div class="add-issues">
       <form onSubmit={handleSubmit}>
-        <h2>Add Issue</h2>
+        <h2>Assign Work</h2>
+        <blockquote>
+          <label>User Name</label>
+          <select name="UserName" onChange={handleChange} required>
+            <option value="">Select Name of User</option>
+            {usersdata.map((user) => (
+              <option value={user.UserName}>{user.UserName}</option>
+            ))}
+          </select>
+        </blockquote>
         <blockquote>
           <label>Project Name</label>
           <select name="ProjectName" onChange={handleChange} required>

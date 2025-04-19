@@ -1,5 +1,6 @@
 .dashboard-project-updates {
   width: 100%;
+  overflow-x: auto;
 }
 
 .dashboard-project-updates div {
